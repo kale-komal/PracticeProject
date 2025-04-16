@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PracticeProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PracticeProject.styles.css" asp-append-version="true" />
+    <!-- Use Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  box-shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">KTechSolutions</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ms-auto px-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Project" asp-action="Index">Projects</a>
+                        </li>
+                       @*  <li class="nav-item dropdown">
+                            <a class="nav-link text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">Projects</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">All</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Web</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">App</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">UX/UI Design</a></li>
+                            </ul>
+                        </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class=" stats-section py-5 text-white" style="line-height:normal;">
+        <div class="container-fluid ">
+            <div class="container">
+                <div class="row fs-small">
+                    <div class="col-md-4">
+                        <h3 class="pb-2">Address —</h3>
+                        <p><i class="fa-solid fa-location-dot pe-2"></i>Kolhapur</p>
+                        <p><i class="fa-solid fa-phone pe-2"></i>+91 7350700434</p>
+                        <p><i class="fa-solid fa-envelope pe-2"></i>komalkale1812@gmail.com</p>
+                        <div class="d-flex gap-3 fs-3">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="pb-2">Quick Links —</h3>
+                        <ul class="list-unstyled fs-5 ">
+                            <li><i class="fa-solid fa-caret-right pe-2"></i>Home</li>
+                            <li><i class="fa-solid fa-caret-right pe-2"></i>About</li>
+                            <li><i class="fa-solid fa-caret-right pe-2"></i>Services</li>
+                            <li><i class="fa-solid fa-caret-right pe-2"></i>Projects</li>
+                            <li><i class="fa-solid fa-caret-right pe-2"></i>Privacy Policy</li>
+                            <li><i class="fa-solid fa-caret-right pe-2"></i>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="pb-2">Gallary —</h3>
+
+                        <div class="row text-center g-3">
+                            <div class="col-4"><img src="~/images/pro1.png" class="img-fluid" /></div>
+                            <div class="col-4"><img src="~/images/pro2.png" class="img-fluid" /></div>
+                            <div class="col-4"><img src="~/images/pro3.png" class="img-fluid" /></div>
+                            <div class="col-4"><img src="~/images/pro3.png" class="img-fluid" /></div>
+                            <div class="col-4"><img src="~/images/pro1.png" class="img-fluid" /></div>
+                            <div class="col-4"><img src="~/images/pro2.png" class="img-fluid" /></div>
+                        </div>
+
+                    </div>
+                    <hr class="text-white" />
+                    <span> &copy; KTechSolutions , all rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

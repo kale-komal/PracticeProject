@@ -1,0 +1,45 @@
+﻿@functions {
+    public string GetFirst25Words(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return "";
+        var words = text.Split(' ');
+        return words.Length > 25 ? string.Join(" ", words.Take(25)) + "..." : text;
+    }
+}
+
+<div class="container-fluid hero-section">
+    <div class="container">
+        <div class="row align-items-center text-center justify-content-center " style="height:300px;">
+            <h1 class="text-uppercase text-white" data-aos="fade-up" data-aos-duration="1200">Projects</h1>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                @foreach (var project in Model)
+                {
+                    <div class="col-10 offset-1 mb-3" >
+                        <div class="row no-gutters overflow-hidden flex-md-row h-md-250 position-relative">
+                            <div class="col-md-6 p-3" data-aos="fade-left" data-aos-duration="1200">
+                                <img src="@project.ProjectImage" class="img-fluid" alt="@project.ProjectName" width="360" height="250" />
+                            </div>
+                            <div class="col-md-6 detaliProjectinfo">
+                                <h5 class="fs-3 pb-2 heading">@project.ProjectName</h5>
+                                <h6 class="gallerycard-title pb-1">@project.ProjectDate</h6>
+                                <p class="gallerycard-title">@GetFirst25Words(project.ProjectDesc)</p>
+                                @* <a class="project-footer mt-auto" href="@Url.Action("ProjectDetails", "Home", new { id = project.ProjectId })"> *@
+                                <a class="project-footer">
+                                Read more ..
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

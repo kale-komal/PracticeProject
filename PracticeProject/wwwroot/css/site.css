@@ -1,0 +1,258 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+header {
+    background-color: #0C0950;
+}
+
+.fs-small {
+    font-size:1.1rem;
+}
+
+.hero-section {
+    background: url("/images/bannerimg.webp") no-repeat center center;
+    background-size: cover;
+}
+
+.heading {
+    color: #FF9B17;
+}
+
+.navbar-toggler-icon {
+    filter: invert(100%);
+}
+
+.hero-btn1 {
+    background-color: #B5A8D5;
+}
+
+
+
+.stats-section {
+    background: linear-gradient(135deg,#2D336B,#578FCA,#4D55CC);
+}
+
+.service-btn {
+    color: #B5A8D5;
+    text-decoration: none;
+    font-size: 1.7rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+    .service-btn:hover {
+        cursor: pointer;
+        color: #B5A8D5;
+        transform: translateX(10px); 
+    }
+
+.project-card .card-img-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+/*------------- testimonial -----------*/
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.testimonial-container {
+    width: 80%;
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 20px;
+   
+}
+
+.testimonial-card {
+    flex: 0 0 calc(50% - 10px); 
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
+
+.quote-icon {
+    font-size: 4rem;
+    color: #B5A8D5;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    color: #B5A8D5;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+    .carousel-btn:hover {
+        background: #B5A8D5;
+        color:black;
+    }
+
+
+#prevBtn, #nextBtn {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/*------------- Service page ------------*/
+.service-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #ff9800;
+    border-radius: 10px;
+    margin: 0 auto 15px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.service-card h5 {
+    font-weight: bold;
+}
+
+.service-card p {
+    color: #666;
+}
+
+/*--------- contact page --------------*/
+.contact-section {
+    background-color: #f8f9fa;
+}
+
+.contact-info i {
+    font-size: 18px;
+}
+
+.contact-form {
+    background: #fff;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*--------------- Admin page-------------------*/
+.admin-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.login-card {
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    color: black;
+}
+
+
+
+.form-control {
+    border-radius: 8px;
+}
+
+.custom-btn {
+    background:#B5A8D5; /* White button */
+    color: black;
+    border: none;
+    transition: 0.3s;
+}
+
+    .custom-btn:hover {
+        background: #ecf0f1;
+        color:#FF9B17;
+    }
+
+
+/*---------------- footer ------------------ */
+footer {
+    background: linear-gradient(135deg,#2D336B,#578FCA,#4D55CC);
+    color: white;
+    padding: 20px 0;
+}
+
+
+.detaliProjectinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.project-footer {
+    color:#B5A8D5;
+    text-decoration: none;
+}
+
+    .project-footer:hover {
+        text-decoration: underline;
+        cursor:pointer;
+    }

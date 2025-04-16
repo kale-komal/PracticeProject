@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Projects";
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Projects Master</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Project</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <a href="~/adminpanel/project/addproject" class="btn btn-primary mb-3">Add New</a>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="projectsTable" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Date</th>
+                                    <th>Title</th>
+                                    <th>Image</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var project in Model)
+                                {
+                                    <tr>
+                                        <td>@project.ProjectId</td>
+                                        <td>@project.ProjectDate.ToString("dd-MM-yyyy")</td>
+                                        <td>@project.ProjectName</td>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(project.ProjectImage))
+                                            {
+                                                <img src="@project.ProjectImage" width="50" height="50" />
+                                            }
+                                            else
+                                            {
+                                                <span>No Image</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("EditProject", "Project", new { area = "AdminPanel", id = project.ProjectId })"
+                                               class="btn btn-outline-primary btn-sm">Edit</a>
+                                            <form asp-area="AdminPanel" asp-controller="Project" asp-action="DeleteConfirmed" method="post"
+                                                  onsubmit="return confirm('Are you sure you want to delete this project?');"
+                                                  style="display:inline;">
+                                                <input type="hidden" name="ProjectId" value="@project.ProjectId" />
+                                                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
